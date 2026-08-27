@@ -1,6 +1,6 @@
 ---
 name: no-ai-slop
-description: Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI.
+description: Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI. Also use for technical documentation, README files, code comments, runbooks, and API docs.
 ---
 
 # No AI slop
@@ -87,11 +87,20 @@ Often-empty phrases: it's worth noting, it's important to note, at the end of th
 
 **Em dashes.** Do not use them as a default rhythm crutch. In short copy, use none. In longer drafts, 1-2 are fine if they clearly beat commas, periods, or parentheses. Remove clusters and decorative dashes.
 
+## Technical documentation
+
+A README, a code comment, a runbook, API docs, a deploy guide, or an error
+message needs a stricter standard on top of everything above. Read
+`technical-documentation.md` and apply it as well.
+
+Do not apply it to essays, posts, letters, or marketing copy.
+
 ## Workflow
 
 1. Read the full draft before editing.
 2. Identify the core point and 3-5 voice signals to preserve, such as vocabulary, cadence, bluntness, humor, uncertainty, or digressions. Keep this note internal. If you cannot identify the core point, ask the user.
 3. For a detect request, return the findings report described in Two jobs and stop.
-4. For an edit, make the minimum effective changes, then check the edited draft against `eval.md` yourself.
-5. If any check fails, fix the draft and run the checks again.
-6. Output the full edited draft and a short **What changed** section.
+4. Decide whether the draft is technical documentation. If it is, read `technical-documentation.md` and apply it on top of every rule above.
+5. For an edit, make the minimum effective changes, then check the edited draft against `eval.md` yourself, and against the checks in `technical-documentation.md` when they apply.
+6. If any check fails, fix the draft and run the checks again.
+7. Output the full edited draft and a short **What changed** section.

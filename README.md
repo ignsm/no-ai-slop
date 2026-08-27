@@ -1,3 +1,9 @@
+> Fork of [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop).
+> One addition: `skills/no-ai-slop/technical-documentation.md`, a stricter
+> simplified-English standard for README files, code comments, and runbooks,
+> based on ASD-STE100. It lives in its own file, so a merge from upstream
+> touches nothing.
+
 # No AI Slop
 
 Remove 20+ patterns of AI slop from your writing without flattening your personal voice.
